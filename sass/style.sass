@@ -1,0 +1,115 @@
+// VARIABLES AND MIXINS
+
+$color-white: #ffffff
+$color-black: #000000
+
+$main-background: linear-gradient(111.04deg, #E2E2E2 0.39%, rgba(255, 255, 255, 0) 86.46%)
+$section-left-background: #F5F5F5
+$section-right-background: #F8FBFF
+
+$font-color: #2E3A59
+$font-color-light: #A6ABBD
+
+$btn-color: #00C368
+$btn-shadow: 0px 8px 16px rgba(0, 195, 104, 0.4)
+
+@mixin links-button
+    border: none
+    border-radius: .8rem
+    background-color: $btn-color
+    box-shadow: $btn-shadow
+
+// COMMON STYLES 
+
+*, ::after, ::before
+    margin: 0
+    padding: 0
+    box-sizing: border-box
+
+html
+    font-size: 62.5%
+    scroll-behavior: smooth
+
+body
+    max-width: 192rem
+    font-size: 1.6rem
+    font-family: 'Roboto', sans-serif
+    color: $font-color
+    background-color: $color-white
+    position: relative
+
+main
+    overflow: hidden
+
+img
+    height: auto
+    display: block
+
+h1, h2, h3, h4
+    margin: 0
+
+a
+    color: $font-color-light
+    font-size: 1.6rem
+    line-height: 2.4rem
+    text-decoration: none
+    transition: .3s
+    cursor: pointer
+
+p
+    text-transform: none
+
+ul, ol
+    list-style: none
+
+i
+    font-size: 5.5rem
+    transition: .3s
+
+    &:hover
+        color: $btn-color
+
+.container
+    width: 175rem
+    margin: 0 auto
+
+// HEADER
+
+.main-header
+    padding: 3rem 0 3.7rem
+
+    &__button
+        margin-left: auto
+
+.main-nav
+    display: flex
+    align-items: center
+
+.logo
+    margin-right: 5%
+
+.navigation
+    display: flex
+    justify-content: space-between
+    align-items: center
+    width: 30%
+
+    &__link
+        padding: .4rem 2.4rem
+        border-radius: .8rem
+
+        &:hover
+            @include links-button
+            color: $color-white
+        
+.button
+    @include links-button
+    padding: .4rem 2.1rem
+    line-height: 2.4rem
+    color: $color-white
+
+// MAIN
+
+
+
+    
