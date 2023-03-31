@@ -44,7 +44,10 @@ img
     height: auto
     display: block
 
-h1, h2, h3, h4
+h1, h2
+    font-size: 4rem
+    font-weight: 700
+    line-height: 4.7rem
     margin: 0
 
 a
@@ -55,7 +58,10 @@ a
     transition: .3s
     cursor: pointer
 
-p
+p, span
+    font-weight: 400
+    font-size: 16px
+    line-height: 150%
     text-transform: none
 
 ul, ol
@@ -111,24 +117,35 @@ i
 
 main
     background: $main-background
-    padding: 7.5rem 0 9.3rem
 
 .line
     width: 18.4rem
     height: .4rem
     background-color: $btn-color
 
+// SECTION OPTIONS
+
+.background
+    position: absolute
+    z-index: 2
+
+    &-left
+        top: 364px
+        left: 263px
+
+    &-right
+        top: -2rem
+        right: 18rem
+
 .options
     text-align: center
     position: relative
+    padding: 7.5rem 0 9.3rem
 
     &__line
         margin: 0 auto 2.2rem
 
     &__header
-        font-size: 4rem
-        font-weight: 700
-        line-height: 4.7rem
         text-transform: uppercase
         margin-bottom: 6.8rem
 
@@ -164,6 +181,9 @@ main
 .rectangle
     margin-bottom: 5%
 
+.width
+    width: 19rem
+
 table
     display: table
     table-layout: auto
@@ -177,21 +197,39 @@ td
     vertical-align: middle
     padding: 2rem
 
-.width
-    width: 19rem
+// SECTION ADDITIONAL
 
-.background
-    position: absolute
-    z-index: 2
+.additional
+    display: flex
+    position: relative
+    z-index: 3
 
-    img
-        position: fixed
+    &__left,
+    &__right
+        width: 50%
+        height: auto
+        padding-top: 10rem
 
-    &-left
-        top: 27rem
-        left: -2rem
+    &__left
+        background-color: $section-left-background
 
-    &-right
-        top: -7.3rem
-        right: 51rem
+        &_line
+            margin: 0 auto 1.8rem
+
+    &__right
+        background-color: $section-right-background
+
+        &_line
+            margin: 0 auto 1.2rem
+
+    &__header
+        margin: 0 auto
+        text-align: center
+
+        &_left
+            width: 75%
+
+        &_right
+            width: 50%
+            line-height: 150%
 
