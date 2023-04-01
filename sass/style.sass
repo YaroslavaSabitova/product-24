@@ -19,6 +19,11 @@ $btn-shadow: 0px 8px 16px rgba(0, 195, 104, 0.4)
     background-color: $btn-color
     box-shadow: $btn-shadow
 
+@mixin display
+    display: flex
+    justify-content: space-between
+    align-items: flex-start
+
 // COMMON STYLES 
 
 *, ::after, ::before
@@ -58,7 +63,7 @@ a
     transition: .3s
     cursor: pointer
 
-p, span
+p, span, blockquote
     font-weight: 400
     font-size: 16px
     line-height: 150%
@@ -199,7 +204,10 @@ td
 
 // SECTION ADDITIONAL
 
-.additional
+.about .container
+    max-width: 77rem
+
+.about
     display: flex
     position: relative
     z-index: 3
@@ -227,9 +235,67 @@ td
         text-align: center
 
         &_left
-            width: 75%
+            width: 95%
+            margin-bottom: 4.8rem
 
         &_right
-            width: 50%
+            width: 60%
             line-height: 150%
+            margin-bottom: 2.7rem
 
+    &__review
+        @include display
+
+.client-foto
+    width: 187px
+    height: 187px
+    // background-image: url(../img/face.jpg)
+    // background-position: -15px -6px
+    background: url(../img/face.jpg) -14px -6px/115% no-repeat
+    border: none
+    border-radius: 100px
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.5)
+    
+blockquote
+    width: 65%
+    position: relative
+    margin-bottom: 13.4rem
+
+    p
+        margin-bottom: 10px
+    cite
+        font-weight: 700
+        line-height: 19px
+
+    &::before,
+    &::after
+        content: ""
+        position: absolute
+        width: 4rem
+        height: 2.6rem
+        background-image: url(../img/quotes.svg)
+
+    &::before
+        top: -.3rem
+        left: -6.2rem
+
+    &::after
+        bottom: -.5rem
+        right: -.7rem
+        transform: rotate(180deg)
+
+.client__review
+    @include display
+
+.client__review .client-foto
+    width: 9.7rem
+    height: 9.7rem
+    background: url(../img/face.jpg) -7px -3px/11.1rem 11.1rem no-repeat
+
+.client__review blockquote
+    width: 30%
+    
+    &::before,
+    &::after
+        display: none
+        
