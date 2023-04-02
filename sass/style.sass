@@ -2,6 +2,7 @@
 
 $color-white: #ffffff
 $color-black: #000000
+$color-gray: #E7EBF0
 
 $main-background: linear-gradient(111.04deg, #E2E2E2 0.39%, rgba(255, 255, 255, 0) 86.46%)
 $section-left-background: #F5F5F5
@@ -255,7 +256,7 @@ td
     border: none
     border-radius: 10rem
     box-shadow: 0 8px 15px rgba(0, 0, 0, 0.5)
-    
+
 blockquote
     width: 65%
     position: relative
@@ -295,8 +296,50 @@ blockquote
 
 .client__review blockquote
     width: 30%
-    
+
     &::before,
     &::after
         display: none
-        
+
+
+
+
+.accordion__item:not(:last-child)
+    margin-bottom: 1rem
+
+.accordion__header
+    display: flex
+    align-items: center
+    border-bottom: 1px solid $color-gray
+
+.accordion__header__title
+    font-weight: 700
+    font-size: 2.4rem
+    line-height: 2.8rem
+    padding-right: 1rem
+    transition: color .3s
+
+.accordion__item.active
+    height: 153
+    border-bottom: 1px solid $color-gray
+
+    & .accordion__header
+        border-bottom: none
+
+    & .accordion__header__title
+        color: $btn-color
+
+.accordion__header__img
+    margin-right: 2.4rem
+    padding: 10px
+    cursor: pointer
+
+.accordion__text
+    padding: 0 3rem 1.6rem
+    margin-left: 5.5rem
+    line-height: 1.9rem
+
+    &__wrapper
+        overflow: hidden
+        height: 0
+        transition: height .3s
