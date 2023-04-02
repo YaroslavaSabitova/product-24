@@ -38,6 +38,7 @@ html
     scroll-behavior: smooth
 
 body
+    font-weight: 400
     font-size: 1.6rem
     font-family: 'Roboto', sans-serif
     color: $font-color
@@ -74,15 +75,8 @@ p, blockquote
 ul, ol
     list-style: none
 
-i
-    font-size: 5.5rem
-    transition: .3s
-
-    &:hover
-        color: $btn-color
-
 .container
-    max-width: 175rem
+    max-width: 1750px
     margin: 0 auto
 
 // HEADER
@@ -108,7 +102,7 @@ i
 
     &__link
         padding: .4rem 2.4rem
-        border-radius: .8rem
+        border-radius: 8px
 
         &:hover
             @include links-button
@@ -137,12 +131,19 @@ main
     z-index: 2
 
     &-left
-        top: 36.4rem
-        left: 26.3rem
+        // top: 36.4rem
+        // left: 26.3rem
+        top: 37%
+        left: 4%
 
     &-right
-        top: -2rem
-        right: 18rem
+        // top: -2rem
+        // right: 18rem
+        top: 3%
+        right: 0
+
+.mobile__img
+    display: none
 
 .options
     text-align: center
@@ -204,6 +205,15 @@ td
     vertical-align: middle
     padding: 2rem
 
+.slider
+    display: none
+
+    img
+        margin: 0 auto 22px
+
+.bx-wrapper
+    display: none
+
 // SECTION ABOUT
 
 .about .container
@@ -253,13 +263,13 @@ td
         @include display
 
 .client-foto
-    width: 18.7rem
-    height: 18.7rem
+    width: 187px
+    height: 187px
     // background-image: url(../img/face.jpg)
     // background-position: -15px -6px
-    background: url(../img/face.jpg) -1.4rem -.6rem/115% no-repeat
+    background: url(../img/face.jpg) -14px -6px/115% no-repeat
     border: none
-    border-radius: 10rem
+    border-radius: 100px
     box-shadow: $foto-shadow
 
 blockquote
@@ -278,26 +288,27 @@ blockquote
     &::after
         content: ""
         position: absolute
-        width: 4rem
-        height: 2.6rem
+        width: 40px
+        height: 26px
         background-image: url(../img/quotes.svg)
+        background-repeat: no-repeat
 
     &::before
-        top: -.3rem
-        left: -6.2rem
+        top: -3px
+        left: -62px
 
     &::after
-        bottom: -.5rem
-        right: -.7rem
+        bottom: -5px
+        right: -7px
         transform: rotate(180deg)
 
 .client__review
     @include display
 
 .client__review .client-foto
-    width: 9.7rem
-    height: 9.7rem
-    background: url(../img/face.jpg) -.7rem -.3rem/11.1rem 11.1rem no-repeat
+    width: 97px
+    height: 97px
+    background: url(../img/face.jpg) -7px -3px/111px 111px no-repeat
 
 .client__review blockquote
     width: 30%
@@ -306,7 +317,6 @@ blockquote
     &::before,
     &::after
         display: none
-
 
 .accordion__item
     margin-bottom: 1rem
@@ -333,10 +343,10 @@ blockquote
     &::before
         content: ""
         position: absolute
-        top: 2.5rem
-        right: .5rem
-        width: 2rem
-        height: 1.5rem
+        top: 25px
+        right: 5px
+        width: 20px
+        height: 15px
         background: url(../icon/arrow.svg) center/cover no-repeat
         transition: .3s
 
@@ -360,3 +370,219 @@ blockquote
         overflow: hidden
         height: 0
         transition: height .3s
+
+// MEDIA QUERIES
+
+@media (max-width: 1600px)
+
+    .container
+        width: 1370px
+
+    html
+        font-size: 61%
+
+    .background-right
+        top: 5%
+
+        img
+            width: 488px
+
+    .background-left
+        top: 20% // 40%
+
+        img
+            width: 342px
+
+    table
+        width: 65%
+
+    .about .container
+        max-width: 65rem
+
+@media (max-width: 1400px)
+
+    .container
+        width: 1170px
+
+    html
+        font-size: 60%
+
+    .background-right img
+        width: 388px
+
+    .background-left img
+        width: 242px
+
+    table
+        width: 75%
+
+    .about .container
+        max-width: 60rem
+
+    .client-foto
+        width: 13rem
+        height: 13rem
+        background: url(../img/face.jpg) -10px -4px/116% no-repeat
+
+    .about__review blockquote
+        width: 63%
+        position: relative
+        margin-bottom: 8.5rem
+
+    .client__review blockquote
+        width: 28%
+
+@media (max-width: 1199px)
+
+    .container
+        width: 960px
+
+    html
+        font-size: 60%
+
+    .logo img
+        width: 218px
+
+    h1, h2
+        font-size: 3rem
+
+    p, blockquote
+        font-size: 1.4rem
+
+    table
+        width: 85%
+
+        svg
+            display: inline-block
+            width: 70px
+
+    table tr:nth-child(1) td:nth-child(4) svg
+        width: 90px
+
+    .options__center img
+        width: 400px
+
+    .client-foto
+        width: 100px
+        height: 100px
+        background: url(../img/face.jpg) -8px -4px/116% no-repeat
+
+    .about .container
+        max-width: 50rem
+
+    .client__review .client-foto
+        width: 70px
+        height: 70px
+        background: url(../img/face.jpg) -5px -2px/80px 80px no-repeat
+
+@media (max-width: 991px)
+
+    .container
+        width: 720px
+
+    html
+        font-size: 55%
+
+    h1, h2
+        font-size: 2.5rem
+
+    .options__center img
+        width: 300px
+
+    table
+        width: 95%
+
+        td
+            padding: 1rem
+
+        svg
+            display: inline-block
+            width: 50px
+
+    table tr:nth-child(1) td:nth-child(4) svg
+        width: 70px
+
+    .about__review blockquote::before
+        top: -10px
+        left: -50px
+
+    .about .container
+        max-width: 40rem
+
+    .accordion__header__title
+        font-size: 2rem
+        width: 75%
+
+    .client-foto
+        width: 80px
+        height: 80px
+        background: url(../img/face.jpg) -6px -4px/116% no-repeat
+
+    .client__review blockquote
+        width: 22%
+
+    .accordion__text
+        margin-left: 6rem
+
+@media (max-width: 767px)
+
+    .container
+        width: 540px
+
+    html
+        font-size: 50%
+
+    main
+        background: $color-white
+
+    .navigation,
+    .button,
+    .rellax,
+    .background,
+    .options .line,
+    table
+        display: none
+
+    .logo
+        margin-right: 0
+        margin-bottom: 50px
+
+    .main-nav
+        justify-content: center
+
+    .mobile__img
+        display: block
+
+        img
+            margin: 0 auto
+
+    .options,
+        padding: 0
+
+    .main-header
+        padding: 11px 0 0
+
+    h1
+        font-size: 24px
+        line-height: 28px
+
+    .bx-wrapper,
+    .slider 
+        display: block
+
+    .bx-wrapper
+        box-shadow: unset !important
+        border: unset !important
+
+    .bx-viewport
+        height: 130px
+
+
+
+@media (max-width: 575px)
+
+    .container
+        width: 100%
+
+    html
+        font-size: 45%
