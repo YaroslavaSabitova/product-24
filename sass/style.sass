@@ -532,6 +532,10 @@ blockquote
     html
         font-size: 50%
 
+    p
+        font-size: 16px
+        line-height: 19px
+
     main
         background: $color-white
 
@@ -562,9 +566,16 @@ blockquote
     .main-header
         padding: 11px 0 0
 
-    h1
+    h1, h2
         font-size: 24px
         line-height: 28px
+
+    .about__header_right
+        line-height: 28px
+        margin-bottom: 20px
+
+    .accordion__header__title
+        line-height: 19px
 
     .bx-wrapper,
     .slider
@@ -599,17 +610,22 @@ blockquote
     .bx-wrapper .bx-pager.bx-default-pager a
         background: $color-gray !important
 
+    .about
+        flex-direction: column-reverse
 
+    .about__left,
+    .about__right
+        width: 100%
 
+    .about .container
+        max-width: 60rem
 
+    .about__right
+        padding: 20px 0 30px
 
-
-
-
-
-
-
-
+    .about__left
+        padding: 27px 0 36px
+        background-color: $color-white
 
 @media (max-width: 575px)
 
@@ -618,3 +634,7 @@ blockquote
 
     html
         font-size: 45%
+
+    .slider__item p
+        width: 70%
+        margin: 0 auto
