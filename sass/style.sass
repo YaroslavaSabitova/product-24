@@ -304,16 +304,28 @@ blockquote
         right: -7px
         transform: rotate(180deg)
 
-.client__review
+.client__review,
+.client__review_first,
+.client__review_second
     @include display
+
+.client__review_first,
+.client__review_second
+    width: 50%
+
+.client__review_first
+    margin-right: 30px
+
+.client__review_second .client-foto
+    margin-right: 23px
 
 .client__review .client-foto
     width: 97px
     height: 97px
-    background: url(../img/face.jpg) -7px -3px/111px 111px no-repeat
+    background: url(../img/face.jpg) -7px -4px/112px 112px no-repeat
 
 .client__review blockquote
-    width: 30%
+    width: 60%
     margin-bottom: 0
 
     &::before,
@@ -383,17 +395,11 @@ blockquote
     html
         font-size: 61%
 
-    .background-right
-        // top: 5%
+    .background-right img
+        width: 488px
 
-        img
-            width: 488px
-
-    .background-left
-        // top: 40%
-
-        img
-            width: 342px
+    .background-left img
+        width: 342px
 
     table
         width: 65%
@@ -432,7 +438,7 @@ blockquote
         margin-bottom: 8.5rem
 
     .client__review blockquote
-        width: 28%
+        width: 55%
 
 @media (max-width: 1199px)
 
@@ -520,8 +526,12 @@ blockquote
         height: 80px
         background: url(../img/face.jpg) -6px -4px/116% no-repeat
 
+    .client__review_first,
+    .client__review_second .client-foto
+        margin-right: 10px
+
     .client__review blockquote
-        width: 22%
+        width: 52%
 
     .accordion__text
         margin-left: 6rem
@@ -670,6 +680,22 @@ blockquote
         height: 97px
         margin-bottom: 30px
 
+    .client__review
+        flex-direction: column
+
+        cite
+            font-size: 16px
+            line-height: 24px
+
+    .client__review_first,
+    .client__review_second
+        flex-direction: row-reverse
+        margin: 0
+        width: 100%
+
+    .client__review_first
+        margin-bottom: 26px
+
 @media (max-width: 575px)
 
     .container
@@ -707,5 +733,16 @@ blockquote
     .about .container
         max-width: 40rem
 
-    .about__review blockquote::after
-        left: 230px
+    .about__review
+        margin-bottom: 430px
+
+        blockquote::after
+            left: 230px
+
+    .client__review blockquote
+        width: 68%
+
+    .client__review .client-foto
+        width: 59px
+        height: 59px
+        background: url(../img/face.jpg) -4px -2px/69px 67px no-repeat
