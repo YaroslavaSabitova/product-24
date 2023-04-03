@@ -382,13 +382,13 @@ blockquote
         font-size: 61%
 
     .background-right
-        top: 5%
+        // top: 5%
 
         img
             width: 488px
 
     .background-left
-        top: 20% // 40%
+        // top: 40%
 
         img
             width: 342px
@@ -567,15 +567,47 @@ blockquote
         line-height: 28px
 
     .bx-wrapper,
-    .slider 
+    .slider
         display: block
 
     .bx-wrapper
         box-shadow: unset !important
         border: unset !important
+        margin-bottom: 110px !important
 
     .bx-viewport
-        height: 130px
+        height: 170px !important
+
+    .bx-wrapper .bx-prev
+        left: 67px !important
+        background: url(../icon/arrow-left.svg) no-repeat 0 0 !important
+
+    .bx-wrapper .bx-next
+        right: 67px !important
+        background: url(../icon/arrow-left.svg) no-repeat 0 0 !important
+        transform: rotate(180deg)
+
+    .bx-wrapper .bx-controls-direction .bx-prev
+        margin-top: 100px !important
+
+    .bx-wrapper .bx-controls-direction .bx-next
+        margin-top: 88px !important
+
+    .bx-wrapper .bx-pager.bx-default-pager a:hover, .bx-wrapper .bx-pager.bx-default-pager a.active, .bx-wrapper .bx-pager.bx-default-pager a:focus
+        background: $font-color-light !important
+
+    .bx-wrapper .bx-pager.bx-default-pager a
+        background: $color-gray !important
+
+
+
+
+
+
+
+
+
+
 
 
 
