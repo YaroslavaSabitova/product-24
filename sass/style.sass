@@ -536,7 +536,6 @@ blockquote
 
     p
         font-size: 16px
-        line-height: 19px
 
     main
         background: $color-white
@@ -576,8 +575,12 @@ blockquote
         line-height: 28px
         margin-bottom: 20px
 
-    .accordion__header__title
+    .accordion__header__title,
+    .accordion__text
         line-height: 19px
+
+    .accordion__text
+        margin-left: 52px
 
     .bx-wrapper,
     .slider
@@ -623,11 +626,49 @@ blockquote
         max-width: 60rem
 
     .about__right
-        padding: 20px 0 30px
+        padding: 20px 0 29px
 
     .about__left
         padding: 27px 0 36px
         background-color: $color-white
+
+    .about__review
+        align-items: center
+        flex-direction: column
+        position: relative
+        margin-bottom: 300px
+
+        blockquote
+            text-align: center
+            line-height: 150%
+            text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25)
+            padding: 80px 16px 15px
+            box-shadow: 0px 8px 16px rgba(0, 195, 104, 0.24)
+            border-radius: 32px
+            position: absolute
+            width: auto
+            top: 45px
+
+            &::before,
+            &::after
+                background-image: url(../img/quotes-grey.svg)
+                top: 25px
+                left: 15px
+
+            &::after
+                left: 422px
+
+            p
+                margin-bottom: 20px
+
+            cite
+                font-size: 16px
+                line-height: 150%
+
+    .client-foto
+        width: 97px
+        height: 97px
+        margin-bottom: 30px
 
 @media (max-width: 575px)
 
@@ -640,3 +681,31 @@ blockquote
     .slider__item p
         width: 70%
         margin: 0 auto
+
+    .about__right_subtitle
+        margin-bottom: 31px
+
+    .about__header_right
+        width: 85%
+
+    .accordion__header__img
+        display: none
+
+    .accordion__header::before
+        top: 12px
+
+    .accordion__header__title
+        font-size: 16px
+        margin-bottom: 15px
+
+    .accordion__text
+        margin-left: -22px
+
+    .accordion__item:nth-child(5) .accordion__header:nth-child(1)
+        border: unset
+
+    .about .container
+        max-width: 40rem
+
+    .about__review blockquote::after
+        left: 230px
